@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="yaz"></p>
+    <script>
+       const yaz= document.getElementById("yaz")
+        function show(start, end) {
+            for (let number = start; number <= end; number++) {
+                let sum = 0
+                const numStr = number.toString()
+                for (let i = 0; i < numStr.length; i++) {
+                    const eded = parseInt(numStr[i], 10);
+                    sum += Math.pow(eded, numStr.length)
+                }
+                if (sum == number) {
+                   yaz.innerHTML += number + ', '
+                   console.log(number)
+                }
+            }
+        }
+        show(0, 10000)
+    </script>
+</body>
+
+</html>

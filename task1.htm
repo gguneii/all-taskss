@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="artir()">+</button>
+    <button onclick="azalt()">-</button> <br>
+
+    <ul id="add"></ul>
+
+    <script>
+        let add = document.getElementById('add')
+        let arr = ''
+       
+        function artir() {
+            arr++
+            show()
+        }
+        function azalt() {
+            arr--
+            show()
+        }
+        function show() {
+            let kod =''
+            for (let i = 0; i < arr; i++) {
+                kod += `<li><input type="text" id="a${i}" value="Guney"/></li>`
+            }
+            add.innerHTML =kod
+        }
+    </script>
+</body>
+
+</html>
